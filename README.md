@@ -1,3 +1,3 @@
-# webpack-config
-# tapaz
-# tapaz
+# npm install
+# npm build
+# npm start
