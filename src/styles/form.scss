@@ -1,0 +1,125 @@
+.form-group {
+  display: flex;
+  justify-content: space-between;
+
+  .form-control {
+    width: auto;
+
+    &:first-child {
+      padding-right: 20px;
+      @media screen and (max-width: variables.$mobile) {
+        padding-right: 30px;
+      }
+      @media screen and (max-width: 370px) {
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+.form-control {
+  width: 100%;
+  padding-bottom: 15px;
+
+  label {
+    color: #737a86;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .input-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__subtext {
+      color: #8e99a4;
+      margin-left: 10px;
+      min-width: 95px;
+    }
+  }
+}
+
+input {
+  border: solid 1px #ebebeb;
+  color: #4a4a4a;
+  padding: 13px 15px;
+  font-size: 16px;
+  border-radius: 3px;
+  caret-color: #426bf2;
+  box-sizing: border-box;
+
+  &.error {
+    border: solid 1.2px #d84a65;
+    background-color: #ffeef1;
+  }
+
+  &::placeholder {
+    color: #d3d8dc;
+  }
+
+  &:focus {
+    box-shadow: 0 2px 4px 0 rgba(153, 153, 153, 0.31);
+    border: solid 1px #1574eb;
+    background-color: #fff;
+    outline: none;
+    box-shadow: none;
+  }
+
+  &:disabled {
+    background-color: #fff;
+  }
+}
+
+// TODO: универсальный метод для отображения иконки на инпуте
+.input--card-number {
+  width: 100%;
+  background-image: url("../images/credit-card-2.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 50%;
+  padding-right: 50px;
+
+  &[value^="5"] {
+    background-image: url("../images/maestro.svg");
+  }
+  &[value^="4"] {
+    background-image: url("../images/visa.svg");
+  }
+  &[value^="3"] {
+    background-image: url("../images/master-card.svg");
+  }
+}
+
+.input--expiration-date {
+  width: 110px;
+
+  @media screen and (max-width: variables.$mobile) {
+    width: 90px;
+  }
+}
+
+.input--cvv {
+  width: 114px;
+  background-image: url("../images/credit-card-2-cvv.svg");
+  background-repeat: no-repeat;
+  background-position-x: 85%;
+  background-position-y: 50%;
+  padding-right: 40px;
+
+  @media screen and (max-width: variables.$mobile) {
+    width: 90px;
+  }
+}
+
+button[type="submit"] {
+  width: 100%;
+  font-size: 16px;
+  color: #fff;
+  background: #b52843;
+  border-radius: 3px;
+  padding: 13px 0;
+  border: none;
+  cursor: pointer;
+}

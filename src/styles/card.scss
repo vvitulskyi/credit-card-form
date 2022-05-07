@@ -1,0 +1,58 @@
+@use "variables";
+
+.card {
+  max-width: variables.$mobile;
+  margin: 0 auto;
+
+  &__header {
+    background-color: #f9f9f9;
+    padding: 20px 50px 14.5px;
+    border: 1px solid variables.$borderColor;
+    border-bottom: 0;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+
+    &__logo {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__subtext {
+      color: #8e99a4;
+      padding: 15px 0 14.5px;
+      border-bottom: 1px solid #f1f1f1;
+      margin-bottom: 14.5px;
+    }
+  }
+
+  &__body {
+    padding: 20px 50px 30px;
+    background: #fff;
+    border: 1px solid variables.$borderColor;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+
+  &__footer {
+    margin: 7px auto 7px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    img {
+      padding: 8px;
+    }
+  }
+}
+
+@media screen and (max-width: variables.$mobile) {
+  .card {
+    &__header {
+      padding: 20px 20px 14px;
+    }
+
+    &__body {
+      padding: 15px 20px 25px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.data-list {
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &__name {
+      color: #8e99a4;
+    }
+
+    &__value {
+      font-size: 13px;
+      color: #212c3a;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@use "variables";
+
+@import "card";
+@import "form";
+@import "data-list";
+
+body {
+  background-color: variables.$bg;
+  padding-top: 55px;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: variables.$font-size;
+}
